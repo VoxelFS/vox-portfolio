@@ -1,0 +1,68 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+
+const email = "owen.li0922@gmail.com";
+---
+
+<html>
+	<body>
+		<div class="container w-1/3 ">
+			<div class="pl-16 pt-20 text-cgrey font-light">
+				<span class="bg-rquartz">.about</span>
+			</div>
+			<div class="pl-16 pt-20 font-semibold text-3xl">
+				owen li
+			</div>
+			<div class="pl-16 pt-3 text-l w-4/5">
+				fourth year computer science student at the university of auckland.
+			</div>
+			<div class="pl-16 pt-10">
+				<a
+					href="https://github.com/VoxelFS"
+					target="_blank"
+					class="relative text-cgrey hover:after:content-['[↗]'] hover:after:ml-1 "
+				>
+					github
+				</a>
+			</div>
+			<div class="pl-16 pt-1">
+				<a
+					href="https://www.linkedin.com/in/owenli0922/"
+					target="_blank"
+					class="relative text-cgrey hover:after:content-['[↗]'] hover:after:ml-1 "
+				>
+					linkedin
+				</a>
+			</div>
+			<div class="pl-16 pt-1" id="email-container">
+				<button
+					id="email-button"
+					class="relative text-cgrey hover:after:content-['[+]'] after:ml-1 after:text-cgrey"
+				>
+					email
+				</button>
+			</div>
+		</div>
+
+
+		<script>
+			const button = document.getElementById("email-button");
+
+			if (button) {
+				button.addEventListener("click", () => {
+					const email = "your-email@example.com"; // Replace with your email address
+					navigator.clipboard.writeText(email).then(() => {
+						button.classList.remove("hover:after:content-['[+]']");
+						button.classList.add("after:content-['[COPIED]']");
+					});
+				});
+
+				button.addEventListener("mouseout", () => {
+					button.classList.remove("after:content-['[COPIED]']");
+					button.classList.add("hover:after:content-['[+]']");
+				});
+			}
+		</script>
+	</body>
+</html>
