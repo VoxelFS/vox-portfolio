@@ -13,12 +13,12 @@ const posts = Object.values(import.meta.glob('../../public/projects/*.md', { eag
 ---
 
 
-<div class="w-2/3 right-0 absolute">
+<div class="w-2/3 right-0 absolute pt-32">
     <div class="flex flex-row">
-        <div class="pl-16 pt-20 text-cgrey font-light">
+        <div class="pl-16 text-cgrey font-light">
             <span class="bg-rquartz">.projects</span>
         </div>
-        <div class="pl-36 pt-20 w-full h-full overflow-scroll">
+        <div class="pl-36 w-full h-full overflow-scroll">
                 {posts.map(post =>
                         <ul class="pb-24">
                             <li class="font-extrabold">{post.frontmatter.title}</li>
