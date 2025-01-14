@@ -1,0 +1,30 @@
+---
+import {type GetStaticPaths} from "astro";
+import {slugify} from "../../js/utils.ts";
+export const getStaticPaths = (() => {
+
+	return [
+        {
+            params: { project: slugify("interactive-storyteller") },
+            props: { name: "interactive storyteller" }
+        },
+        {
+            params: { project: slugify("plantr") },
+            props: { name: "plantr" }
+        },
+        {
+            params: { project: slugify("portfolio") },
+            props: { name: "portfolio" }
+        },
+        {
+            params: { project: slugify("youth-of-orakei") },
+            props: { name: "youth of orakei" }
+        }
+    ];
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.params;
+const { name } = Astro.props;
+---
+
+{name}

@@ -1,4 +1,6 @@
 ---
+import {slugify} from "../js/utils.ts";
+
 interface Frontmatter {
     title: string;
     description: string;
@@ -21,7 +23,7 @@ const posts = Object.values(import.meta.glob('../../public/projects/*.md', { eag
         <div class="pl-36 w-full h-full overflow-scroll">
                 {posts.map(post =>
                         <ul class="pb-24">
-                            <li class="font-extrabold">{post.frontmatter.title}</li>
+                            <li class="font-extrabold"><a href=`/projects/${slugify(post.frontmatter.title)}`>{post.frontmatter.title}</a></li>
                             <li class="text-cgrey">{post.frontmatter.description}</li>
                             <li class="text-cgrey font-light">[{post.frontmatter.technologies}]</li>
                         </ul>
