@@ -1,17 +1,7 @@
 ---
-import {slugify} from "../js/utils.ts";
+import {getPosts, slugify} from "../js/utils.ts";
 
-interface Frontmatter {
-    title: string;
-    description: string;
-    technologies: string;
-}
-
-interface Post {
-    frontmatter: Frontmatter;
-}
-
-const posts = Object.values(import.meta.glob('../../public/projects/*.md', { eager: true })) as Post[];
+const posts = getPosts();
 ---
 
 

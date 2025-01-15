@@ -8,3 +8,18 @@ export function slugify(text: string) {
         .replace(/^-+/, '')
         .replace(/-+$/, '');
 }
+
+interface Frontmatter {
+    title: string;
+    description: string;
+    technologies: string;
+}
+
+interface Post {
+    frontmatter: Frontmatter;
+    Content: string;
+}
+
+export const getPosts = () => {
+    return Object.values(import.meta.glob('../../public/projects/*.md', { eager: true })) as Post[];
+}

@@ -1,6 +1,8 @@
 ---
 import {type GetStaticPaths} from "astro";
-import {slugify} from "../../js/utils.ts";
+import {getPosts, slugify} from "../../js/utils.ts";
+import Layout from "../../layouts/Layout.astro";
+
 export const getStaticPaths = (() => {
 
 	return [
@@ -25,6 +27,24 @@ export const getStaticPaths = (() => {
 
 const { project } = Astro.params;
 const { name } = Astro.props;
+
+const posts = getPosts();
+const truePost = posts.filter(post => {
+    return post.frontmatter.title === name;
+})[0];
+
 ---
 
-{name}
+<Layout title=`ol | ${name}` >
+    <div class="container w-1/3 flex flex-col fixed">
+        <div class="pl-16 pt-32 font-bold">
+            <a href="/">← back</a>
+        </div>
+        <div class="pl-16 pt-20 font-semibold text-2xl">
+            {name}
+        </div>
+        <div class="pl-16 pt-3 text-l w-4/5">
+            <truePost.Content />
+        </div>
+    </div>
+</Layout>
