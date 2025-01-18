@@ -2,6 +2,7 @@
 import {type GetStaticPaths} from "astro";
 import {getPosts, slugify} from "../../js/utils.ts";
 import Layout from "../../layouts/Layout.astro";
+import ProjectImages from "../../components/ProjectImages.astro";
 
 export const getStaticPaths = (() => {
 
@@ -46,5 +47,15 @@ const truePost = posts.filter(post => {
         <div class="pl-16 pt-3 text-l w-4/5">
             <truePost.Content />
         </div>
+        <div class="pl-16 pt-10">
+            <a
+                    href={truePost.frontmatter.github}
+                    target="_blank"
+                    class="relative text-cgrey hover:after:content-['[↗]'] hover:after:ml-1 "
+            >
+                github repo
+            </a>
+        </div>
     </div>
+    <ProjectImages project={project} />
 </Layout>

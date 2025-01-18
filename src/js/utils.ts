@@ -13,6 +13,7 @@ interface Frontmatter {
     title: string;
     description: string;
     technologies: string;
+    github: string;
 }
 
 interface Post {

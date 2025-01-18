@@ -1,0 +1,30 @@
+---
+interface Image {
+    src: string;
+    width: number;
+    height: number;
+    format: string;
+}
+
+interface Images {
+    default: Image;
+}
+
+const { project } = Astro.props;
+
+const images = Object.values(import.meta.glob('../../public/images/*.JPG', { eager: true })) as Images[];
+
+const filteredImages = images.filter((image) => {
+    return image.default.src.includes(project);
+});
+---
+
+<div class="w-2/3 right-0 absolute pt-32 pr-16 pb-20">
+    <div class="flex flex-row">
+        <div class="pl-36 w-full h-full overflow-scroll">
+            {filteredImages.map((image) => (
+                <img src={image.default.src} alt={project} class="pb-12" />
+            ))}
+        </div>
+    </div>
+</div>
