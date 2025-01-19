@@ -5,12 +5,12 @@ const posts = getPosts();
 ---
 
 
-<div class="w-2/3 right-0 absolute pt-32">
-    <div class="flex flex-row">
-        <div class="pl-16 text-cgrey font-light">
+<div class="w-full right-0 absolute pt-96 md:w-2/3 md:pt-32">
+    <div class="flex flex-col md:flex-row">
+        <div class="pl-8 text-cgrey font-light md:pl-16">
             <span class="bg-rquartz">.projects</span>
         </div>
-        <div class="pl-36 w-full h-full overflow-scroll">
+        <div class="pl-8 w-full h-full overflow-scroll overflow-y-hidden overflow-x-hidden md:pl-36">
                 {posts.map(post =>
                         <ul class="pb-24">
                             <li class="font-extrabold"><a href=`/projects/${slugify(post.frontmatter.title)}`>{post.frontmatter.title}</a></li>
