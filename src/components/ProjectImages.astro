@@ -19,9 +19,9 @@ const filteredImages = images.filter((image) => {
 });
 ---
 
-<div class="w-2/3 right-0 absolute pt-32 pr-16 pb-20">
+<div class="w-full right-0 absolute pt-16 pr-8 pb-20 md:w-2/3 md:pr-16 md:pt-32">
     <div class="flex flex-row">
-        <div class="pl-36 w-full h-full overflow-scroll overflow-y-hidden overflow-x-hidden">
+        <div class="pl-8 w-full h-full overflow-scroll overflow-y-hidden overflow-x-hidden md:pl-36">
             {filteredImages.map((image) => (
                 <img src={image.default.src} alt={project} class="pb-12" />
             ))}
