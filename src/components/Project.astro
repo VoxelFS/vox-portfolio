@@ -10,7 +10,7 @@ const posts = getPosts();
         <div class="pl-8 text-cgrey font-light md:pl-16">
             <span class="bg-rquartz">.projects</span>
         </div>
-        <div class="pl-8 w-full h-full overflow-scroll overflow-y-hidden overflow-x-hidden md:pl-36">
+        <div class="pl-8 pr-8 w-full h-full overflow-scroll overflow-y-hidden overflow-x-hidden md:pl-36">
                 {posts.map(post =>
                         <ul class="pb-24">
                             <li class="font-extrabold"><a href=`/projects/${slugify(post.frontmatter.title)}`>{post.frontmatter.title}</a></li>
