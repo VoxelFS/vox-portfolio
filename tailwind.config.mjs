@@ -5,9 +5,12 @@ export default {
 		extend: {
 			colors: {
 				"cgrey": "#454545",
-				"rquartz": "#F7CAC9"
+				"rquartz": "#F7CAC9",
+				"odark": "#363434",
+				"opink": "#E8C4B8"
 			}
 		},
 	},
 	plugins: [],
+	darkMode: "class",
 }
