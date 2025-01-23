@@ -1,7 +1,7 @@
 ---
 title: portfolio
 description: a minimalist portfolio
-technologies: react, astro
+technologies: astro, tailwind
 github: https://github.com/VoxelFS/vox-portfolio
 ---
 

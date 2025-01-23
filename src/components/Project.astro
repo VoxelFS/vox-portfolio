@@ -14,7 +14,7 @@ const posts = getPosts();
                 {posts.map(post =>
                         <ul class="pb-24">
                             <li class="font-extrabold dark:text-white">
-                                <a href=`/projects/${slugify(post.frontmatter.title)}` class="hover:after:content-['[→]'] hover:after:ml-1 ">
+                                <a href=`/vox-portfolio/projects/${slugify(post.frontmatter.title)}` class="hover:after:content-['[→]'] hover:after:ml-1 ">
                                     {post.frontmatter.title}
                                 </a>
                             </li>
