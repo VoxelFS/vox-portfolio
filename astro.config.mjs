@@ -7,6 +7,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind()],
-  site: 'https://voxelfs.github.io',
-  base: 'vox-portfolio'
+  site: 'https://voxelfs.github.io'
 });
