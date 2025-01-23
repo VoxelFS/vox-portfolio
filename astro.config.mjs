@@ -8,5 +8,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [react(), tailwind()],
   site: 'https://voxelfs.github.io',
-  base: '/'
+  base: 'vox-portfolio'
 });
