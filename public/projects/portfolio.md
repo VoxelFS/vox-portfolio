@@ -1,11 +1,10 @@
 ---
 title: portfolio
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: a minimalist portfolio
 technologies: react, astro
 github: https://github.com/VoxelFS/vox-portfolio
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et  porttitor lectus. Vivamus id convallis metus.
+a simple website that showcases some things i have built.
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et  porttitor lectus. Vivamus id convallis metus.
+this website has been heavily inspired by [p.cv](https://p.cv/) and [deadsimplesites](https://deadsimplesites.com/).
