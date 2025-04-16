@@ -5,3 +5,24 @@
     font-style: normal;
     font-display: swap;
 }
+
+:root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-accent-text: #454545;
+    --color-accent: #F7CAC9
+}
+
+.theme-default {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-accent-text: #454545;
+    --color-accent: #F7CAC9
+}
+
+.theme-olivia {
+    --color-bg: #363434;
+    --color-text: #ffffff;
+    --color-accent-text: #454545;
+    --color-accent: #E8C4B8;
+}
