@@ -11,7 +11,8 @@ export default {
 				"background": 'var(--color-bg)',
 				"text": 'var(--color-text)',
 				"textAccent": 'var(--color-accent-text)',
-				"accent": 'var(--color-accent)'
+				"accent": 'var(--color-accent)',
+				"title": 'var(--color-title)',
 			}
 		},
 	},
