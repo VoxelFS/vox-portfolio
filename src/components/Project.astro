@@ -7,19 +7,19 @@ const posts = getPosts();
 
 <div class="w-full right-0 absolute pt-96 md:w-2/3 md:pt-32">
     <div class="flex flex-col md:flex-row">
-        <div class="pl-8 text-cgrey font-light md:pl-16">
-            <span class="bg-rquartz dark:bg-opink dark:text-odark px-1 py-1">.projects</span>
+        <div class="pl-8 text-title font-light md:pl-16">
+            <span class="bg-accent px-1 py-1">.projects</span>
         </div>
         <div class="pl-8 pr-8 w-full h-full overflow-scroll overflow-y-hidden overflow-x-hidden md:pl-36">
                 {posts.map(post =>
                         <ul class="pb-24">
-                            <li class="font-extrabold dark:text-white">
-                                <a href=`/projects/${slugify(post.frontmatter.title)}` class="hover:after:content-['[→]'] hover:after:ml-1 ">
+                            <li class="font-extrabold text-text">
+                                <a href=`/projects/${slugify(post.frontmatter.title)}` class="hover:after:content-['[→]'] hover:after:ml-1 underline">
                                     {post.frontmatter.title}
                                 </a>
                             </li>
-                            <li class="text-cgrey dark:text-opink">{post.frontmatter.description}</li>
-                            <li class="text-cgrey font-light dark:text-opink">[{post.frontmatter.technologies}]</li>
+                            <li class="text-textAccent">{post.frontmatter.description}</li>
+                            <li class="text-textAccent">[{post.frontmatter.technologies}]</li>
                         </ul>
                 )}
         </div>
