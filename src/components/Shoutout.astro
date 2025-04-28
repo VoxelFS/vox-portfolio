@@ -1,0 +1,41 @@
+---
+const links = [
+    {
+        name: "andrew qiu",
+        website: "https://v3.andrewqiu.com/"
+    },
+    {
+        name: "anton garay",
+        website: "https://antga.dev/"
+    },
+    {
+        name: "eric zheng",
+        website: "https://ericzheng.nz/"
+    }
+]
+---
+
+<html>
+<body>
+<div class="container w-full flex flex-col md:fixed md:w-1/3">
+    <div class="pl-8 pt-16 text-title font-light md:pl-16 md:pt-32">
+        <span class="bg-accent px-1 py-1">.friends</span>
+    </div>
+    <div class="pl-8 pr-8 pt-4 text-l w-full md:pt-14 md:w-4/5 md:pl-16 text-text pb-10 space-y-4">
+        <p>during my time at university, i've made a lot of great friends in computer science.</p>
+        <p>these people have shown me some pretty amazing stuff, so this space is dedicated to showcasing them and their websites.</p>
+    </div>
+    {links.map((link) => (
+        <div class="pl-8 pt-1 md:pl-16">
+            <a
+                    href={link.website}
+                    target="_blank"
+                    class="relative text-textAccent underline hover:after:content-['[↗]'] hover:after:ml-1 "
+            >
+                {link.name}
+            </a>
+        </div>
+    ))}
+</div>
+</body>
+</html>
