@@ -24,9 +24,9 @@ const { friends } = Astro.props;
 		<slot />
 	</div>
 
-	<div class="w-full flex justify-between px-6 font-bold text-lg text-textAccent mb-3 md:fixed md:bottom-3 md:left-0">
+	<div class="w-full flex justify-between items-center px-6 font-bold text-lg text-textAccent mb-3 md:fixed md:bottom-3 md:left-0">
 		<button id="theme-btn">.theme</button>
-		{friends ? <a href="/friends" class="hover:underline text-sm">check out my friends!</a> : <></>}
+		{friends ? <a href="/friends" class="hover:underline text-sm mb-0">check out my friends!</a> : <></>}
 	</div>
 	</body>
 </html>
