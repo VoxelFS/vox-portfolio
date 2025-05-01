@@ -1,0 +1,39 @@
+---
+---
+<head>
+    <!-- Only include once per page -->
+    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css" />
+    <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+    <title></title>
+</head>
+
+<div id="dos-container">
+    <div id="dos"></div>
+</div>
+
+<style>
+    #dos-container {
+        width: 100%;
+        max-width: 960px; /* or whatever fits your layout */
+        aspect-ratio: 4 / 3;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #dos {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        Dos(document.getElementById("dos"), {
+            url: "https://v8.js-dos.com/bundles/doom.jsdos",
+            kiosk: true,
+            autoStart: true,
+            renderAspect: "4/3",  // Ensures DOS screen scales to correct aspect
+            imageRendering: "pixelated"
+        });
+    });
+</script>
