@@ -22,6 +22,10 @@ export const getStaticPaths = (() => {
         {
             params: { project: slugify("youth-of-orakei") },
             props: { name: "youth of orakei" }
+        },
+        {
+            params: { project: slugify("yoyos-amazing-bingo") },
+            props: { name: "yoyos amazing bingo" }
         }
     ];
 }) satisfies GetStaticPaths;
