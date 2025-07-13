@@ -30,6 +30,10 @@ export const getStaticPaths = (() => {
         {
             params: {project: slugify("folletto") },
             props: { name: "folletto" }
+        },
+        {
+            params: {project: slugify("esa") },
+            props: { name: "esa" }
         }
     ];
 }) satisfies GetStaticPaths;

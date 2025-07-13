@@ -1,6 +1,6 @@
 ---
 title: folletto
-description: website for folletto caffè
+description: a website for folletto caffè
 technologies: react, typescript, tailwind, nextjs, payload, cloudflare r2, 
 github: https://github.com/VoxelFS/folletto
 ---
